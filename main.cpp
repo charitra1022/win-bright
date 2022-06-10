@@ -5,9 +5,7 @@
 #include <gtkmm/window.h>
 #include <gtkmm/box.h>
 #include <gtkmm/checkbutton.h>
-#include <winuser.h>
-#include <gdiplus.h>
-#include <windows.h>
+#include "winbright.h"
 
 
 class HelloWorld : public Gtk::Window
@@ -17,8 +15,6 @@ class HelloWorld : public Gtk::Window
       void on_slider_changed();
       void on_checkbtn_checked();
       void on_resetbtn_clicked();
-      int applyBrighness(int);
-      void changeGamma(int);
 
       //Member widgets:
       Gtk::Scale slider_wid;    //slider
@@ -55,7 +51,7 @@ class HelloWorld : public Gtk::Window
             slider_wid = Gtk::Scale();
             slider_wid.set_range(10, 100);
             slider_wid.signal_value_changed().connect(sigc::mem_fun(*this, &HelloWorld::on_slider_changed));
-            slider_wid.set_value(30);
+            slider_wid.set_value(getBrightness());
 
             hbox1.append(slider_wid);   //add slider to horizontal layout
             slider_wid.set_expand();
@@ -98,7 +94,7 @@ class HelloWorld : public Gtk::Window
 void HelloWorld::on_slider_changed(){
     int val = (int)this->slider_wid.get_value();
     this->disp.set_text(Glib::ustring::format(val));
-    this->applyBrighness(val);
+    applyBrighness(val);
 }
 
 
@@ -111,23 +107,6 @@ void HelloWorld::on_checkbtn_checked(){
          std::cout << "Checked - No" << std::endl;
          this->slider_wid.set_range(10, 100);
     }
-}
-
-
-void HelloWorld::changeGamma(int value){
-    std::cout << "Gamma - " << value << std::endl;
-    HDC hdc = GetDC(0);
-}
-
-
-int HelloWorld::applyBrighness(int percent) {
-    if (percent>100) percent=100;
-    if (percent<10) percent=10;
-    int value = (percent*128)/100;
-
-    std::cout << "Brightness - " << percent << std::endl;
-    this->changeGamma(value);
-    return percent;
 }
 
 
