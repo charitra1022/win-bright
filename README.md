@@ -33,6 +33,7 @@ pacman -S pkgconf
 ### Setting up Code::Blocks Compiler
 
 1. Open **Compiler** Settings.
+
 ![compiler1.png](/screenshots/compiler1.png)
 
 2. Setup **mingw** compiler from *msys2* as default compiler in codeblocks.
@@ -44,14 +45,21 @@ pacman -S pkgconf
 **For creating a new project.**
 
 1. Create a **C++** **console** application project in codeblocks.
+
 ![compiler3.png](/screenshots/compiler3.png)
+
 ![compiler4.png](/screenshots/compiler4.png)
+
 ![compiler5.png](/screenshots/compiler5.png)
+
 Give any **title** to the project.
+
 ![compiler6.png](/screenshots/compiler6.png)
+
 ![compiler7.png](/screenshots/compiler7.png)
 
 2. Setup project build options. Right click the **project name** in Workspace pane.
+
 ![compiler8.png](/screenshots/compiler8.png)
 
 Click on **Other Compiler Options** and paste the following code:
