@@ -1,9 +1,6 @@
 /.vscode/
 /bin/
 /obj/
-/win-bright.layout.save
 /win-bright.depend
-/main.cpp.save
-/winbright.h.save
 /win-bright.cscope_file_list
-/win-bright.cbp.save
+/*.save
