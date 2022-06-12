@@ -84,6 +84,7 @@ Click on **Linker Settings** and paste the following code, and click **OK**:
 `pkgconf --libs glibmm-2.68`
 `pkgconf --libs gtkmm-4.0`
 `pkgconf --libs gdkmm-2.4`
+-static-libgcc -static-libstdc++ -mwindows
 ```
 ![compiler10.png](/screenshots/compiler10.png)
 
