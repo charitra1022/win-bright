@@ -1,8 +1,7 @@
-## Welcome to GitHub Pages
+## WinBright
 
-You can use the [editor on GitHub](https://github.com/charitra1022/win-bright/edit/master/docs/index.md) to maintain and preview the content for your website in Markdown files.
-
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+A desktop application for Windows computers made in GTK4 and GTKMM to control screen brightness at software level.
+It manipulates the GammaRamp values obtained from the GDI+ API of the Windows API for setting the brightness at software level.
 
 ### Markdown
 
