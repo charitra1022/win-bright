@@ -34,6 +34,7 @@ pacman -S mingw-w64-x86_64-gtkmm-4.0
 
 pacman -S pkgconf
 ```
+5. Add `C:\msys64\mingw32\bin` to path on your system.
 
 ### Setting up Code::Blocks Compiler
 
