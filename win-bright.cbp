@@ -25,7 +25,7 @@
 					<Add option="`pkgconf --libs glibmm-2.68`" />
 					<Add option="`pkgconf --libs gtkmm-4.0`" />
 					<Add option="`pkgconf --libs gdkmm-2.4`" />
-					<Add option="-static-libgcc -static-libstdc++ -static-libgcc -mwindows" />
+					<Add option="-mwindows" />
 				</Linker>
 			</Target>
 			<Target title="Release">
