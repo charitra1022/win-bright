@@ -37,7 +37,7 @@ class ScopedDC {
 
 int percent_to_gamma(int percent) {
     //converts percent to a value between 0-128
-    if (percent>100) percent=100;
+    if (percent>150) percent=150;
     if (percent<10) percent=10;
     int value = (percent*128)/100;
     return value;
