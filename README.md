@@ -22,25 +22,25 @@ To run this project, some things need to be setup.
 3. Open **MSYS2** and run `pacman -Syu` again.
 4. Open **MSYS2** and run the following commands one by one:
 
-For x64 compiler and builds
+    For x64 compiler and builds
 
-```
-pacman -S --needed base-devel mingw-w64-x86_64-toolchain
-pacman -S pkgconf
-pacman -S mingw-w64-x86_64-gtk4
-pacman -S mingw-w64-x86_64-gtkmm-4.0
-pacman -S pkgconf
-```
+   ```
+   pacman -S --needed base-devel mingw-w64-x86_64-toolchain
+   pacman -S pkgconf
+   pacman -S mingw-w64-x86_64-gtk4
+   pacman -S mingw-w64-x86_64-gtkmm-4.0
+   pacman -S pkgconf
+   ```
 
-For x32 compiler and builds
+    For x32 compiler and builds
 
-```
-pacman -S mingw-w64-i686-toolchain
-pacman -S pkgconf
-pacman -S mingw-w64-i686-gtk4
-pacman -S mingw-w64-i686-gtkmm-4.0
-pacman -S pkgconf
-```
+   ```
+   pacman -S mingw-w64-i686-toolchain
+   pacman -S pkgconf
+   pacman -S mingw-w64-i686-gtk4
+   pacman -S mingw-w64-i686-gtkmm-4.0
+   pacman -S pkgconf
+   ```
 
 5. Add the follwing to path on your system.
    
