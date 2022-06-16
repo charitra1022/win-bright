@@ -57,61 +57,60 @@ To run this project, some things need to be setup.
 
 1. Open **Compiler** Settings.
 
-![compiler1.png](/screenshots/compiler1.png)
+    ![compiler1.png](/screenshots/compiler1.png)
 
 2. Setup **mingw** compiler from *msys2* as default compiler in codeblocks.
 `C:\msys64\mingw32` for x32 bit and `C:\msys64\mingw64` for x64 bit
 
-![compiler2.png](/screenshots/compiler2.png)
+    ![compiler2.png](/screenshots/compiler2.png)
 
 ### Setting up Code::Blocks Project
 
-**For creating a new project.**
+**Option 1: Cloning the master branch.**
+
+Clone the master branch and open the **win-bright.cbp** file with codeblocks.
+
+**Option 2: Creating a new project.**
 
 1. Create a **C++** **console** application project in codeblocks.
 
-![compiler3.png](/screenshots/compiler3.png)
+    ![compiler3.png](/screenshots/compiler3.png)
 
-![compiler4.png](/screenshots/compiler4.png)
+    ![compiler4.png](/screenshots/compiler4.png)
 
-![compiler5.png](/screenshots/compiler5.png)
+    ![compiler5.png](/screenshots/compiler5.png)
 
-Give any **title** to the project.
+    Give any **title** to the project.
 
-![compiler6.png](/screenshots/compiler6.png)
+    ![compiler6.png](/screenshots/compiler6.png)
 
-![compiler7.png](/screenshots/compiler7.png)
+    ![compiler7.png](/screenshots/compiler7.png)
 
 2. Setup project build options. Right click the **project name** in Workspace pane.
 
-![compiler8.png](/screenshots/compiler8.png)
+    ![compiler8.png](/screenshots/compiler8.png)
 
-Click on **Other Compiler Options** and paste the following code:
-```
-`pkgconf --cflags gtk4`
-`pkgconf --cflags glib-2.0`
-`pkgconf --cflags glibmm-2.68`
-`pkgconf --cflags gtkmm-4.0`
-`pkgconf --cflags gdkmm-2.4`
-```
-![compiler9.png](/screenshots/compiler9.png)
+    Click on **Other Compiler Options** and paste the following code:
+   ```
+   `pkgconf --cflags gtk4`
+   `pkgconf --cflags glib-2.0`
+   `pkgconf --cflags glibmm-2.68`
+   `pkgconf --cflags gtkmm-4.0`
+   `pkgconf --cflags gdkmm-2.4`
+   ```
+    ![compiler9.png](/screenshots/compiler9.png)
 
-Click on **Linker Settings** and paste the following code, and click **OK**:
-```
-`pkgconf --libs gtk4`
-`pkgconf --libs glib-2.0`
-`pkgconf --libs glibmm-2.68`
-`pkgconf --libs gtkmm-4.0`
-`pkgconf --libs gdkmm-2.4`
--static-libgcc -static-libstdc++ -mwindows
-```
-![compiler10.png](/screenshots/compiler10.png)
+    Click on **Linker Settings** and paste the following code, and click **OK**:
+   ```
+   `pkgconf --libs gtk4`
+   `pkgconf --libs glib-2.0`
+   `pkgconf --libs glibmm-2.68`
+   `pkgconf --libs gtkmm-4.0`
+   `pkgconf --libs gdkmm-2.4`
+   -static-libgcc -static-libstdc++ -mwindows
+   ```
+    ![compiler10.png](/screenshots/compiler10.png)
 
-
-
-**For cloning the master branch project.**
-
-Just clone the master branch and open the **win-bright.cbp** file with codeblocks.
 
 ## Releases
 Visit the [releases](https://github.com/charitra1022/win-bright/releases) page for downloading the latest version or view release notes.
