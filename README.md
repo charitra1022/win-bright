@@ -5,6 +5,9 @@ An application implemented in GTKMM4 for controlling brightness in `Windows` Des
 ## Table of Contents
 1. [Issues](#issues)
 2. [Setup](#setup)
+    1. [Installations](#installations)
+    2. [Setup Compiler]
+    3. [Setup Project]
 3. [Releases and Downloads](#releases)
 
 ## Issues
