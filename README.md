@@ -6,8 +6,8 @@ An application implemented in GTKMM4 for controlling brightness in `Windows` Des
 1. [Issues](#issues)
 2. [Setup](#setup)
     1. [Installations](#installations)
-    2. [Setup Compiler]
-    3. [Setup Project]
+    2. [Setup Compiler](#setting-up-codeblocks-compiler)
+    3. [Setup Project](#setting-up-codeblocks-project)
 3. [Releases and Downloads](#releases)
 
 ## Issues
