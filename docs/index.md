@@ -3,34 +3,119 @@
 A desktop application for Windows computers made in GTK4 and GTKMM to control screen brightness at software level.
 It manipulates the GammaRamp values obtained from the GDI+ API of the Windows API for setting the brightness at software level.
 
-### Markdown
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+## Table of Contents
+1. [Issues](#issues)
+2. [Setup](#setup)
+    1. [Installations](#installations)
+    2. [Setup Compiler](#setting-up-codeblocks-compiler)
+    3. [Setup Project](#setting-up-codeblocks-project)
+3. [Releases and Downloads](#releases)
 
-```markdown
-Syntax highlighted code block
+## Issues
 
-# Header 1
-## Header 2
-### Header 3
+Refer [issues](https://github.com/charitra1022/win-bright/issues) for more detail on current and resolved issues
 
-- Bulleted
-- List
+## Setup
 
-1. Numbered
-2. List
+To run this project, some things need to be setup.
 
-**Bold** and _Italic_ and `Code` text
+### Installations
 
-[Link](url) and ![Image](src)
-```
+1. Install [MSYS2](https://www.msys2.org/)
+2. Open **MSYS2** and run `pacman -Syu`
+3. Open **MSYS2** and run `pacman -Syu` again.
+4. Open **MSYS2** and run the following commands one by one:
 
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
+    For x64 compiler and builds
 
-### Jekyll Themes
+   ```
+   pacman -S --needed base-devel mingw-w64-x86_64-toolchain
+   pacman -S pkgconf
+   pacman -S mingw-w64-x86_64-gtk4
+   pacman -S mingw-w64-x86_64-gtkmm-4.0
+   pacman -S pkgconf
+   ```
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/charitra1022/win-bright/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+    For x32 compiler and builds
 
-### Support or Contact
+   ```
+   pacman -S mingw-w64-i686-toolchain
+   pacman -S pkgconf
+   pacman -S mingw-w64-i686-gtk4
+   pacman -S mingw-w64-i686-gtkmm-4.0
+   pacman -S pkgconf
+   ```
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+5. Add the follwing to path on your system.
+   
+    For x32 bit
+   ```
+   C:\msys64\mingw32\bin
+   ```
+   For x64 bit
+   ```
+   C:\msys64\mingw64\bin
+   ```
+
+### Setting up Code::Blocks Compiler
+
+1. Open **Compiler** Settings.
+
+    ![compiler1.png](/screenshots/compiler1.png)
+
+2. Setup **mingw** compiler from *msys2* as default compiler in codeblocks.
+`C:\msys64\mingw32` for x32 bit and `C:\msys64\mingw64` for x64 bit
+
+    ![compiler2.png](/screenshots/compiler2.png)
+
+### Setting up Code::Blocks Project
+
+**Option 1: Cloning the master branch.**
+
+Clone the master branch and open the **win-bright.cbp** file with codeblocks.
+
+**Option 2: Creating a new project.**
+
+1. Create a **C++** **console** application project in codeblocks.
+
+    ![compiler3.png](/screenshots/compiler3.png)
+
+    ![compiler4.png](/screenshots/compiler4.png)
+
+    ![compiler5.png](/screenshots/compiler5.png)
+
+    Give any **title** to the project.
+
+    ![compiler6.png](/screenshots/compiler6.png)
+
+    ![compiler7.png](/screenshots/compiler7.png)
+
+2. Setup project build options. Right click the **project name** in Workspace pane.
+
+    ![compiler8.png](/screenshots/compiler8.png)
+
+    Click on **Other Compiler Options** and paste the following code:
+   ```
+   `pkgconf --cflags gtk4`
+   `pkgconf --cflags glib-2.0`
+   `pkgconf --cflags glibmm-2.68`
+   `pkgconf --cflags gtkmm-4.0`
+   `pkgconf --cflags gdkmm-2.4`
+   ```
+    ![compiler9.png](/screenshots/compiler9.png)
+
+    Click on **Linker Settings** and paste the following code, and click **OK**:
+   ```
+   `pkgconf --libs gtk4`
+   `pkgconf --libs glib-2.0`
+   `pkgconf --libs glibmm-2.68`
+   `pkgconf --libs gtkmm-4.0`
+   `pkgconf --libs gdkmm-2.4`
+   -static-libgcc -static-libstdc++ -mwindows
+   ```
+    ![compiler10.png](/screenshots/compiler10.png)
+
+
+## Releases
+Visit the [releases](https://github.com/charitra1022/win-bright/releases) page for downloading the latest version or view release notes.
