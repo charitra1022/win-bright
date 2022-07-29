@@ -4,7 +4,7 @@
             "name": "GTK: Build executable",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}\\obj\\Debug\\${fileBasenameNoExtension}.exe",
+            "program": "${workspaceFolder}\\bin\\${fileBasenameNoExtension}.exe",
             "preLaunchTask": "GTK: g++.exe build active file",
             "args": [],
             "stopAtEntry": false,

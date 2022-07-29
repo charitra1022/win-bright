@@ -106,7 +106,7 @@
 
                 "${file}",
                 "-o",
-                "${workspaceFolder}\\obj\\Debug\\${fileBasenameNoExtension}.o",
+                "${workspaceFolder}\\obj\\${fileBasenameNoExtension}.o",
 
                 "&&",
 
@@ -115,8 +115,8 @@
                 "g++.exe",
                 "-LC:\\msys64\\mingw64\\include",
                 "-o",
-                "${workspaceFolder}\\obj\\Debug\\${fileBasenameNoExtension}.exe",
-                "${workspaceFolder}\\obj\\Debug\\${fileBasenameNoExtension}.o",
+                "${workspaceFolder}\\bin\\${fileBasenameNoExtension}.exe",
+                "${workspaceFolder}\\obj\\${fileBasenameNoExtension}.o",
 
                 "-LC:/msys64/mingw64/bin/../lib",
                 "-lgtk-4",
