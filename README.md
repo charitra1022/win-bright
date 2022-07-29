@@ -6,17 +6,28 @@ An application implemented in GTKMM4 for controlling brightness in `Windows` Des
 1. [Issues](#issues)
 2. [Setup](#setup)
     1. [Installations](#installations)
-    2. [Setup Compiler](#setting-up-codeblocks-compiler)
-    3. [Setup Project](#setting-up-codeblocks-project)
-3. [Releases and Downloads](#releases)
+    2. [Setting up Code::Blocks Compiler](#setting-up-codeblocks-compiler)
+    3. [Setting up Code::Blocks Project](#setting-up-codeblocks-project)
+3. [VSCode](#vscode)
+4. [Releases and Downloads](#releases)
+
+<br/>
+<hr/>
+<br/>
 
 ## Issues
 
 Refer [issues](https://github.com/charitra1022/win-bright/issues) for more detail on current and resolved issues
 
+<br/>
+<hr/>
+<br/>
+
 ## Setup
 
 To run this project, some things need to be setup.
+
+<br/>
 
 ### Installations
 
@@ -56,6 +67,8 @@ To run this project, some things need to be setup.
    C:\msys64\mingw64\bin
    ```
 
+<br/>
+
 ### Setting up Code::Blocks Compiler
 
 1. Open **Compiler** Settings.
@@ -66,6 +79,9 @@ To run this project, some things need to be setup.
 `C:\msys64\mingw32` for x32 bit and `C:\msys64\mingw64` for x64 bit
 
     ![compiler2.png](/screenshots/compiler2.png)
+
+<br/>
+<br/>
 
 ### Setting up Code::Blocks Project
 
@@ -114,6 +130,31 @@ Clone the master branch and open the **win-bright.cbp** file with codeblocks.
    ```
     ![compiler10.png](/screenshots/compiler10.png)
 
+
+<br/>
+<hr/>
+<br/>
+
+## VSCode
+For working with **vscode**, all above setup should be done. After that, install [C/C++ Extension Pack](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools-extension-pack).
+Once installed, the setup will be done automatically as all the required setup files are present already in the [.vscode](/.vscode) folder.
+
+Run the **main.cpp** file.
+![vscode1.png](/screenshots/vscode1.png)
+
+Select **GTK: Build executable** option in run options.
+![vscode2.png](/screenshots/vscode2.png)
+
+And the project files will be created in **obj** (as *main.o* file) and **bin** (as *main.exe* file) folders.
+
+VSCode is just helpful for writing code as its better than Code::Blocks in terms of **syntax highlighting** and **autocomplete**.
+
+Executables can also be created using Code::Blocks build and run method which is recommended over the vscode building.
+
+
+<br/>
+<hr/>
+<br/>
 
 ## Releases
 Visit the [releases](https://github.com/charitra1022/win-bright/releases) page for downloading the latest version or view release notes.
