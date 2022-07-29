@@ -1,5 +1,9 @@
-/bin/
-/obj/
+/bin/*.exe
+/bin/Debug/*.exe
+
+/obj/*.o
+/obj/Debug/*.o
+
 /win-bright.depend
 /win-bright.cscope_file_list
 /*.save
