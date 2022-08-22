@@ -5,9 +5,10 @@ An application implemented in GTKMM4 for controlling brightness in `Windows` Des
 ## Table of Contents
 1. [Issues](#issues)
 2. [Setup](#setup)
-    1. [Installations](#installations)
-    2. [Setting up Code::Blocks Compiler](#setting-up-codeblocks-compiler)
-    3. [Setting up Code::Blocks Project](#setting-up-codeblocks-project)
+    1. [Proxy Setup](#proxy-setup) 
+    2. [Installations](#installations)
+    3. [Setting up Code::Blocks Compiler](#setting-up-codeblocks-compiler)
+    4. [Setting up Code::Blocks Project](#setting-up-codeblocks-project)
 3. [VSCode](#vscode)
 4. [Releases and Downloads](#releases)
 
@@ -28,6 +29,19 @@ Refer [issues](https://github.com/charitra1022/win-bright/issues) for more detai
 To run this project, some things need to be setup.
 
 <br/>
+
+
+### Proxy Setup
+If you are using a proxy server, then type the following commands on the **MSYS2** terminal by replacing the placeholders (on first line only) with your proxy details.
+```
+export HTTP_PROXY="username:password@proxy.server.address:port"
+export HTTPS_PROXY=$HTTP_PROXY
+export http_proxy=$HTTP_PROXY
+export https_proxy=$HTTP_PROXY
+```
+
+<br/>
+
 
 ### Installations
 
@@ -68,6 +82,8 @@ To run this project, some things need to be setup.
    ```
 
 <br/>
+
+
 
 ### Setting up Code::Blocks Compiler
 
