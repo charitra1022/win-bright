@@ -1,4 +1,4 @@
-# win-bright
+c# win-bright
 
 An application implemented in GTKMM4 for controlling brightness in `Windows` Desktops at software level by adjusting GammaRamp values.
 
@@ -63,7 +63,7 @@ export https_proxy=$HTTP_PROXY
     For x32 compiler and builds
 
    ```
-   pacman -S mingw-w64-i686-toolchain
+   pacman -S --needed base-devel mingw-w64-i686-toolchain
    pacman -S pkgconf
    pacman -S mingw-w64-i686-gtk4
    pacman -S mingw-w64-i686-gtkmm-4.0
